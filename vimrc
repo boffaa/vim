@@ -1,45 +1,35 @@
 " enable pathogen for loading plugins
 execute pathogen#infect()
+
+" always display status line
 set laststatus=2
 
-" enable syntax highlighting
+" enable syntax highlighting for file types
+filetype plugin on
 syntax enable
 
 " show line numbers
 set number
 
-" set editor size
-set lines=30 
+" highlight the line that the cursor is on
+set cursorline
 
-" set right border
+" display right margin
 set colorcolumn=80
 
 " set tabs to have 4 spaces
 set ts=4
-
-" indent when moving to the next line
 set autoindent
 set smartindent
-" when using the >> or << commands, shift lines by 4 spaces
-set shiftwidth=4
-" expand tabs into spaces
-set expandtab
-
-" show a visual line under the cursor's current line
-set cursorline
 
 " show matching pair for [] {} ()
 set showmatch
 
-" enable all Python syntax highlighting features
-" let python_highlight_all = 1
-
-" Misc
-set hidden
-set history=100
-
-filetype indent on
-set nowrap
-
 " highlight search results
 set hlsearch
+
+" ingore .swp files in vim explorer
+let g:netrw_list_hide= '.*\.swp$'
+
+" use the mouse
+set mouse=a
