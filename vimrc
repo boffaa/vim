@@ -4,23 +4,24 @@ execute pathogen#infect()
 " always display status line
 set laststatus=2
 
-" enable syntax highlighting for file types
-filetype plugin on
+" enable syntax highlighting
 syntax enable
 
 " show line numbers
-set number
+set relativenumber
 
 " highlight the line that the cursor is on
 set cursorline
 
-" display right margin
-set colorcolumn=80
+" No text wrap
+set nowrap
 
-" set tabs to have 4 spaces
-set ts=4
+" set indentation behavior
+set tabstop=4
+set shiftwidth=4
 set autoindent
 set smartindent
+set expandtab
 
 " show matching pair for [] {} ()
 set showmatch
@@ -33,3 +34,10 @@ let g:netrw_list_hide= '.*\.swp$'
 
 " use the mouse
 set mouse=a
+
+" mappings
+imap <leader>[ <%
+imap <leader>] %>
+imap <leader><leader>[ {%
+imap <leader><leader>] %}
+
